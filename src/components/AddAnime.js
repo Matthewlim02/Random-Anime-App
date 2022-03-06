@@ -1,4 +1,4 @@
-import { PropTypes } from 'react';
+import React from 'react';
 
 export default class AddAnime extends React.Component {
     constructor(props) {
@@ -31,4 +31,5 @@ export default class AddAnime extends React.Component {
             </form>
             
           );
-    }} 
+      }
+    } 

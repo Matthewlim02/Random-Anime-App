@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AnimeList from './AnimeList';
+import AnimePageBanner from './AnimePageBanner';
+import HeaderComponent from './Header2Component';
 
 function Anime() {
 
@@ -20,15 +22,19 @@ function Anime() {
 
     return (
         <div>
-            <h2>New Animes To Check Out!</h2>
+            <AnimePageBanner />
+            <br/>
+            <HeaderComponent />
             {data.map(data => (
-                <h1 key={data.anilist_id}>
+                <h4 key={data.anilist_id} className="animeApi">
                     <Link to={`/anime/${data.anilist_id}`}>{data.titles.rj}</Link>
-                </h1>
+                </h4>
 
             ))}
         <div>
+            <br/>
             <h2>My Anime List:</h2>
+            <br/>
             <AnimeList />
         </div>
         </div>
